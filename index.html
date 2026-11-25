@@ -55,13 +55,25 @@ img { max-width: 100%; }
 .gc-feat:nth-child(3n+1) { border-top: 4px solid #1d4ed8; }
 .gc-feat:nth-child(3n+2) { border-top: 4px solid #dc2626; }
 .gc-feat:nth-child(3n) { border-top: 4px solid #16a34a; }
+#gc-nav { display: flex; gap: 8px; overflow-x: auto; padding: 12px 16px; background: #f1f7fc; position: sticky; top: 0; z-index: 5; justify-content: flex-start; scrollbar-width: none; }
+#gc-nav::-webkit-scrollbar { display: none; }
+#gc-nav a { flex: 0 0 auto; color: #0b2540; background: #fff; border: 1px solid #cfe0ef; padding: 8px 16px; border-radius: 999px; font-weight: 700; font-size: 15px; white-space: nowrap; }
+#gc-nav a.on { background: #1d4ed8; color: #fff; border-color: #1d4ed8; }
+@media (min-width: 900px) { #gc-nav { justify-content: center; } }
+.js .gc-tab { display: none; }
+.js .gc-tab.on { display: block; }
+.gc-sub { color: #55708a; margin-top: -8px; font-size: 17px; }
+.gc-soon { background: #eef4fa; color: #55708a; border: 2px dashed #bcd0e4; align-items: center; justify-content: center; }
+.gc-brands { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 700px) { .gc-brands { grid-template-columns: repeat(5, 1fr); } }
+.gc-brand { border: 1px solid #dce6f0; border-radius: 14px; padding: 26px 10px; text-align: center; font-size: 20px; font-weight: 700; color: #1d4ed8; background: #fff; }
 </style>
 </head>
 <body>
 <div class="gc" dir="rtl" lang="ar">
         <header class="gc-top">
             <img class="gc-logo" src="assets/logo.png" alt="جنرال كول" />
-            <nav><a href="#services">خدماتنا</a><a href="#features">مميزاتنا</a><a href="#contact">اتصل بنا</a></nav>
+            
         </header>
         <section class="gc-hero">
             <img class="gc-cover" src="assets/cover.png" alt="جنرال كول لأعمال التكييف: معاك على طول" />
@@ -69,15 +81,30 @@ img { max-width: 100%; }
             <p class="gc-lead">بيع وشراء واستبدال وصيانة وحدات التكييف والتبريد في القاهرة، الجيزة، القليوبية، الشرقية.</p>
             <a class="gc-btn" href="https://wa.me/201227993630" target="_blank" rel="noopener">تواصل معنا على واتساب</a>
         </section>
-        <section id="services" class="gc-sec">
+        <nav id="gc-nav"><a href="#services" data-t="services">خدماتنا</a><a href="#features" data-t="features">مميزاتنا</a><a href="#works" data-t="works">معرض أعمالنا</a><a href="#devices" data-t="devices">معرض الأجهزة</a><a href="#partners" data-t="partners">شركائنا</a><a href="#contact" data-t="contact">اتصل بنا</a></nav>
+        <section id="services" class="gc-sec gc-tab">
             <h2>خدماتنا</h2>
             <div class="gc-grid"><div class="gc-card"><h3>بيع وشراء الوحدات</h3><p>بيع وشراء وحدات التكييف والتبريد بأنواعها.</p></div><div class="gc-card"><h3>الاستبدال</h3><p>استبدال الوحدات القديمة بوحدات جديدة بتركيب مضبوط.</p></div><div class="gc-card"><h3>الصيانة</h3><p>صيانة وإصلاح وحدات التكييف والتبريد.</p></div></div>
         </section>
-        <section id="features" class="gc-sec">
+        <section id="features" class="gc-sec gc-tab">
             <h2>مميزاتنا</h2>
             <div class="gc-grid"><div class="gc-card gc-feat"><div class="gc-ico">1</div><h3>شغل نظيف</h3><p>بنسيب مكان الشغل نضيف زي ما لقيناه: تغطية للأثاث، وتنظيف بعد كل تركيب أو صيانة.</p></div><div class="gc-card gc-feat"><div class="gc-ico">2</div><h3>تركيب وصيانة آمنة</h3><p>تنفيذ بخطوات سليمة وتوصيلات مظبوطة، عشان تطمّن على بيتك وعلى أهلك وعلى جهازك.</p></div><div class="gc-card gc-feat"><div class="gc-ico">3</div><h3>التزام بالمواعيد</h3><p>بنحدد معاك الميعاد ونلتزم بيه، ومش بنضيّع وقتك في الانتظار.</p></div><div class="gc-card gc-feat"><div class="gc-ico">4</div><h3>نصيحة أمينة</h3><p>بنقولك الحل المناسب بصراحة: صيانة، استبدال أو شراء، من غير ما نبيعلك حاجة مش محتاجها.</p></div><div class="gc-card gc-feat"><div class="gc-ico">5</div><h3>شغل مضبوط في بيع واستبدال وصيانة</h3><p>من اختيار الوحدة المناسبة لمكانك لحد التشغيل والتجربة قدامك.</p></div><div class="gc-card gc-feat"><div class="gc-ico">6</div><h3>تواصل سهل ومباشر</h3><p>كلمنا على واتساب أو اتصال، وهتلاقي رد وخدمة في القاهرة والجيزة والقليوبية والشرقية.</p></div></div>
         </section>
-        <section id="contact" class="gc-sec gc-contact">
+        <section id="works" class="gc-sec gc-tab">
+            <h2>معرض أعمالنا</h2>
+            <div class="gc-grid gc-works"><div class="gc-work gc-w0"><span>تكييف مطعم</span></div><div class="gc-work gc-w1"><span>تكييف شقة</span></div><div class="gc-work gc-w2"><span>تكييف فيلا</span></div><div class="gc-work gc-w0"><span>تكييف مكتب إداري</span></div><div class="gc-work gc-w1"><span>غرفة تبريد تجارية</span></div><div class="gc-work gc-w2"><span>صيانة محلات</span></div></div>
+        </section>
+        <section id="devices" class="gc-sec gc-tab">
+            <h2>معرض الأجهزة</h2>
+            <p class="gc-sub">الأجهزة المتاحة في الشركة</p>
+            <div class="gc-grid gc-works"><div class="gc-work gc-w0 gc-soon"><span>قريبًا</span></div></div>
+        </section>
+        <section id="partners" class="gc-sec gc-tab">
+            <h2>شركائنا</h2>
+            <p class="gc-sub">الماركات التي نتعامل معها</p>
+            <div class="gc-brands"><div class="gc-brand">كاريير</div><div class="gc-brand">شارب</div><div class="gc-brand">تورنيدو</div><div class="gc-brand">ميديا</div><div class="gc-brand">هايسنس</div></div>
+        </section>
+        <section id="contact" class="gc-sec gc-contact gc-tab">
             <h2>تواصل معنا</h2>
             <p>التواصل مع: <b>eng. Yehia Abbas</b></p>
             <p>الهاتف / واتساب: <b dir="ltr">0122 799 3630</b></p>
@@ -91,5 +118,20 @@ img { max-width: 100%; }
         </section>
         <footer class="gc-foot">الحقوق المحفوظة لـ فريق جنرال كول</footer>
     </div>
+<script>
+(function(){
+ document.documentElement.className+=' js';
+ var tabs=['services','features','works','devices','partners','contact'];
+ function show(id){
+  if(tabs.indexOf(id)<0)id='services';
+  tabs.forEach(function(t){document.getElementById(t).classList.toggle('on',t===id);});
+  [].forEach.call(document.querySelectorAll('#gc-nav a'),function(a){var on=a.getAttribute('data-t')===id;a.classList.toggle('on',on);if(on&&window.__gcMoved){a.scrollIntoView({block:'nearest',inline:'center'});}});
+ }
+ [].forEach.call(document.querySelectorAll('#gc-nav a'),function(a){
+  a.addEventListener('click',function(e){e.preventDefault();var id=a.getAttribute('data-t');window.__gcMoved=1;history.replaceState(null,'','#'+id);show(id);});
+ });
+ show((location.hash||'').slice(1));
+})();
+</script>
 </body>
 </html>
