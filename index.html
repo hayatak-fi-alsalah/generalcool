@@ -48,13 +48,20 @@ img { max-width: 100%; }
 .gc-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .gc-contact .gc-btn.gc-call { background: #16a34a; }
 .gc-maplink { display: inline-block; border: 2px solid #1d4ed8; color: #1d4ed8; padding: 8px 18px; border-radius: 999px; font-weight: 700; }
+.gc-feat .gc-ico { width: 34px; height: 34px; border-radius: 50%; background: #1d4ed8; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+.gc-feat:nth-child(3n+2) .gc-ico { background: #dc2626; }
+.gc-feat:nth-child(3n) .gc-ico { background: #16a34a; }
+.gc-feat h3 { color: #0b2540; }
+.gc-feat:nth-child(3n+1) { border-top: 4px solid #1d4ed8; }
+.gc-feat:nth-child(3n+2) { border-top: 4px solid #dc2626; }
+.gc-feat:nth-child(3n) { border-top: 4px solid #16a34a; }
 </style>
 </head>
 <body>
 <div class="gc" dir="rtl" lang="ar">
         <header class="gc-top">
             <img class="gc-logo" src="assets/logo.png" alt="جنرال كول" />
-            <nav><a href="#services">خدماتنا</a><a href="#contact">اتصل بنا</a></nav>
+            <nav><a href="#services">خدماتنا</a><a href="#features">مميزاتنا</a><a href="#contact">اتصل بنا</a></nav>
         </header>
         <section class="gc-hero">
             <img class="gc-cover" src="assets/cover.png" alt="جنرال كول لأعمال التكييف: معاك على طول" />
@@ -66,9 +73,9 @@ img { max-width: 100%; }
             <h2>خدماتنا</h2>
             <div class="gc-grid"><div class="gc-card"><h3>بيع وشراء الوحدات</h3><p>بيع وشراء وحدات التكييف والتبريد بأنواعها.</p></div><div class="gc-card"><h3>الاستبدال</h3><p>استبدال الوحدات القديمة بوحدات جديدة بتركيب مضبوط.</p></div><div class="gc-card"><h3>الصيانة</h3><p>صيانة وإصلاح وحدات التكييف والتبريد.</p></div></div>
         </section>
-        <section class="gc-sec">
-            <h2>ليه جنرال كول؟</h2>
-            <ul class="gc-why"><li>✓ خدمة في القاهرة، الجيزة، القليوبية، الشرقية</li><li>✓ ثلاث خدمات في مكان واحد: بيع وشراء، استبدال، صيانة</li><li>✓ تواصل مباشر على واتساب</li></ul>
+        <section id="features" class="gc-sec">
+            <h2>مميزاتنا</h2>
+            <div class="gc-grid"><div class="gc-card gc-feat"><div class="gc-ico">1</div><h3>شغل نظيف</h3><p>بنسيب مكان الشغل نضيف زي ما لقيناه: تغطية للأثاث، وتنظيف بعد كل تركيب أو صيانة.</p></div><div class="gc-card gc-feat"><div class="gc-ico">2</div><h3>تركيب وصيانة آمنة</h3><p>تنفيذ بخطوات سليمة وتوصيلات مظبوطة، عشان تطمّن على بيتك وعلى أهلك وعلى جهازك.</p></div><div class="gc-card gc-feat"><div class="gc-ico">3</div><h3>التزام بالمواعيد</h3><p>بنحدد معاك الميعاد ونلتزم بيه، ومش بنضيّع وقتك في الانتظار.</p></div><div class="gc-card gc-feat"><div class="gc-ico">4</div><h3>نصيحة أمينة</h3><p>بنقولك الحل المناسب بصراحة: صيانة، استبدال أو شراء، من غير ما نبيعلك حاجة مش محتاجها.</p></div><div class="gc-card gc-feat"><div class="gc-ico">5</div><h3>شغل مضبوط في بيع واستبدال وصيانة</h3><p>من اختيار الوحدة المناسبة لمكانك لحد التشغيل والتجربة قدامك.</p></div><div class="gc-card gc-feat"><div class="gc-ico">6</div><h3>تواصل سهل ومباشر</h3><p>كلمنا على واتساب أو اتصال، وهتلاقي رد وخدمة في القاهرة والجيزة والقليوبية والشرقية.</p></div></div>
         </section>
         <section id="contact" class="gc-sec gc-contact">
             <h2>تواصل معنا</h2>
