@@ -134,7 +134,7 @@ img { max-width: 100%; }
  [].forEach.call(document.querySelectorAll('#gc-nav a'),function(a){
   a.addEventListener('click',function(e){e.preventDefault();var id=a.getAttribute('data-t');window.__gcMoved=1;history.replaceState(null,'','#'+id);show(id);});
  });
- show((location.hash||'').slice(1));
+ show((location.hash||'').slice(1));if(location.hash){window.scrollTo(0,0);setTimeout(function(){window.scrollTo(0,0);},50);}
 })();
 </script>
 </body>
